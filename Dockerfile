@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM golang:1.21.1-alpine3.18 as builder
+FROM --platform=linux/arm64,linux/amd64 golang:1.21.1-alpine3.18 as builder
 RUN apk add --no-cache gcc git make musl-dev
 
 COPY ./go.mod /app/go.mod
